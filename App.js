@@ -1,21 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import {ThemeProvider} from 'styled-components';
+import { darkTheme, lightTheme } from "./src/res/Themes";
+import {ButtonAM, Container, TextAm} from "./src/components/CustomStyled";
 
 export default function App() {
+  const [theme, setTheme] = useState(darkTheme);
+  const swapTheme = () => {
+    setTheme(theme.name === 'dark' ? lightTheme : darkTheme)
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <TextAm>Press Button to Change Theme</TextAm>
+        <ButtonAM text={`Current Theme: ${theme.name}`} onPress={swapTheme} />
+      </Container>
+    </ThemeProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
