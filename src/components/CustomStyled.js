@@ -14,7 +14,7 @@ export const OpacityAM = styled.TouchableOpacity`
   border-radius: 20px;
 `;
 
-export const TextAm = styled.Text`
+export const TextAM = styled.Text`
   color: ${props => props.theme.text};
 `
 
