@@ -5,7 +5,7 @@
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "start": "react-native start",
-    "lint": "eslint src --fix"
+    "lint": "eslint App.jsx src --fix"
   },
   "dependencies": {
     "expo": "~42.0.1",
