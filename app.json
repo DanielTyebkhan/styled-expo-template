@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "auto-metronome",
-    "slug": "auto-metronome",
+    "name": "expo-template",
+    "slug": "expo-template",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "auto-metronome"
+  "name": "expo-template"
 }
